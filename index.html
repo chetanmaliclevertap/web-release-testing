@@ -104,7 +104,7 @@ function renderCartDropOffPersonalisationCampaign (data) {
             }
 
             function pushEventAddToCart() {
-                clevertap.event.push("Added to Cart", {
+                clevertap.event.push("CM 3", {
                     "Product ID": "pr_57235721c9f9a1",
                     "product name": "Lamb Curry Cut1",
                     Price: 298,
@@ -215,7 +215,7 @@ function renderCartDropOffPersonalisationCampaign (data) {
                     alert("Select atleast one event");
                     return;
                 }
-                if (adc) clevertap.event.push("Added to Cart");
+                if (adc) clevertap.event.push("CM 3");
                 if (ps) clevertap.event.push("Product Sold");
                 if (pv) clevertap.event.push("Product Viewed");
 
@@ -316,8 +316,7 @@ function renderCartDropOffPersonalisationCampaign (data) {
 
         <br />
         <hr />
-        <input type="checkbox" name="event" value="adc" id="adc" /> Added to
-        Cart <br />
+        <input type="checkbox" name="event" value="adc" id="adc" /> CM 3 <br />
         <input type="checkbox" name="event" value="ps" id="ps" /> Product Sold
         <br />
         <input type="checkbox" name="event" value="pv" id="pv" /> Product Viewed
