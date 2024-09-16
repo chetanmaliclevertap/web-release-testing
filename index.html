@@ -46,10 +46,11 @@
 		console.log(matchedElements);
           if (matchedElements.length) {
             matchedElements.forEach(el => {
-              if (!isInViewport(el)) {
-		      console.log(el);
-                elements.push(el);
-              }
+        //       if (!isInViewport(el)) {
+		      // console.log(el);
+        //         elements.push(el);
+        //       }
+		                    elements.push(el);
             })
             delete retryElements[selector]; // Successfully processed, remove from retry list
           } else {
