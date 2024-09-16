@@ -4,7 +4,7 @@
         <link rel="manifest" href="/web-sdk-test/manifest.json">
 
 <script>
-  const personalizedSelectors = [".nav","#constantOUL", "#adc"];
+  const personalizedSelectors = [".nav","#constantOUL", "#adc", ".chetanClassImage"];
   const delay = 2000; //time in ms;
   (function (personalizedSelectors, delayTime) {
     const retryElements = {}; // Track selectors that need retry
@@ -46,11 +46,10 @@
 		console.log(matchedElements);
           if (matchedElements.length) {
             matchedElements.forEach(el => {
-        //       if (!isInViewport(el)) {
-		      // console.log(el);
-        //         elements.push(el);
-        //       }
-		                    elements.push(el);
+              if (!isInViewport(el)) {
+		      console.log(el);
+                elements.push(el);
+              }
             })
             delete retryElements[selector]; // Successfully processed, remove from retry list
           } else {
@@ -452,6 +451,6 @@ function renderCartDropOffPersonalisationCampaign (data) {
     <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ni40LzEwICAyMjIuNEsgVm90ZXM%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00137215-xfrypjkuws-portrait.jpg"
         alt="Trulli" width="500" height="333">
     <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1682617582350_webbannernpa.jpg"
-        alt="Trulli" width="500" height="333">
+        alt="Trulli" width="500" height="333" id="chetanImage" class="chetanClassImage">
     </body>
 </html>
